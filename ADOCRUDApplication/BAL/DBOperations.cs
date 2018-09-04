@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using ADOCRUDApplication.Models;
 
 namespace DAL
@@ -13,24 +13,23 @@ namespace DAL
         private SqlConnection sqlConnection;
         private SqlDataAdapter sqlDataAdapter;
 
-        private string connectionString = "Data Source=LAPTOP-335E2OI0;Initial Catalog=ProductDatabase;Integrated Security=True";
+        private string connectionString = "Data Source=192.168.12.20;Initial Catalog=training2018;User ID=usr_2018;Password=pwd@123";
 
         public IEnumerable<Product> GetProducts()
         {
             using (sqlConnection = new SqlConnection(connectionString))
             {
                 sqlConnection.Open();
-
-                sqlCommand = new SqlCommand("SELECT * FROM ProductTable ", sqlConnection);
+                sqlCommand = new SqlCommand("SELECT * FROM tblProduct ", sqlConnection);
+                SqlDataReader dataReader = sqlCommand.ExecuteReader();
 
                 List<Product> products = new List<Product>();
 
-                SqlDataReader dataReader = sqlCommand.ExecuteReader();
                 while (dataReader.Read())
                 {
                     products.Add(new Product
                     {
-                        ProductId = Convert.ToInt32(dataReader["ProductId"]),
+                        ProductID = Convert.ToInt32(dataReader["ProductID"]),
                         ProductName = Convert.ToString(dataReader["ProductName"]),
                         ProductCategoryID = Convert.ToInt32(dataReader["ProductCategoryID"]),
                         ProductPrice = Convert.ToInt32(dataReader["ProductPrice"]),
@@ -48,51 +47,84 @@ namespace DAL
             {
                 sqlConnection.Open();
 
-                sqlCommand = new SqlCommand("INSERT INTO ProductTable (ProductID, ProductName, ProductPrice, ProductCategoryID, DateCreated) VALUES (@id, @name, @price, @categoryID, @dateCreated)", sqlConnection);
+                sqlCommand = new SqlCommand("INSERT INTO tblProduct (ProductName, ProductPrice, ProductCategoryID, DateCreated) VALUES (@ProductName, @ProductPrice, @ProductCategoryID, @DateCreated)", sqlConnection);
 
-                sqlCommand.Parameters.AddWithValue("@id", product.ProductId);
-                sqlCommand.Parameters.AddWithValue("@name", product.ProductName);
-                sqlCommand.Parameters.AddWithValue("@price", product.ProductPrice);
-                sqlCommand.Parameters.AddWithValue("@categoryID", product.ProductCategoryID);
-                sqlCommand.Parameters.AddWithValue("@dateCreated", product.DateCreated);
+                sqlCommand.Parameters.AddWithValue("@ProductName", product.ProductName);
+                sqlCommand.Parameters.AddWithValue("@ProductPrice", product.ProductPrice);
+                sqlCommand.Parameters.AddWithValue("@ProductCategoryID", product.ProductCategoryID);
+                sqlCommand.Parameters.AddWithValue("@DateCreated", DateTime.Now.Date);
 
-                var result = sqlCommand.ExecuteNonQuery();
+                var rowsAffected = sqlCommand.ExecuteNonQuery();
 
-                return result;
+                return rowsAffected;
             }
         }
 
         public int UpdateProduct(Product product)
         {
-            //using (sqlConnection = new SqlConnection(connectionString))
-            //{
-            //    sqlConnection.Open();
+            using (sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
 
-            //    sqlCommand = new SqlCommand();
-            //    sqlCommand.Connection = sqlConnection;
-            //    sqlCommand.CommandText = "";
-            //    sqlCommand.CommandType = CommandType.StoredProcedure;
-            //    sqlCommand.Parameters.AddWithValue("@id", product.ProductId);
-            //    var dataReader = sqlCommand.ExecuteReader();
-            //    if(dataReader.HasRows)
-            //    {
+                sqlCommand = new SqlCommand("UPDATE tblProduct SET ProductName ='" + product.ProductName + "', ProductPrice = " + product.ProductPrice + ", ProductCategoryID =" + product.ProductCategoryID + ", DateCreated ='" + DateTime.Now + "' where ProductID =" + product.ProductID, sqlConnection);
 
-            //    }
-            //}
-            return 0;
+                var rowsAffected = sqlCommand.ExecuteNonQuery();
+
+                return rowsAffected;
+            }
         }
 
         public int DeleteProduct(int productID)
         {
-            throw new NotImplementedException();
+            using (sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("DELETE FROM tblProduct WHERE ProductID = " + productID, sqlConnection);
+                SqlDataReader dataReader = sqlCommand.ExecuteReader();
+                return dataReader.RecordsAffected;
+            }
         }
 
-        public Product GetProduct(int productID)
+        public Product GetProductByID(int productID)
         {
-            throw new NotImplementedException();
+            using (sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("SELECT * FROM tblProduct WHERE ProductID =" + productID, sqlConnection);
+
+                SqlDataReader dataReader = sqlCommand.ExecuteReader();
+
+                if (dataReader.HasRows)
+                {
+                    dataReader.Read();
+                    return new Product
+                    {
+                        ProductID = Convert.ToInt32(dataReader["ProductID"]),
+                        ProductName = Convert.ToString(dataReader["ProductName"]),
+                        ProductPrice = Convert.ToInt32(dataReader["ProductPrice"]),
+                        ProductCategoryID = Convert.ToInt32(dataReader["ProductCategoryID"]),
+                        DateCreated = Convert.ToDateTime(dataReader["DateCreated"])
+                    };
+                }
+                else
+                {
+                    return null;
+                }
+            }
         }
 
-        
+        public IEnumerable<Product> Search(SearchProperties searchProperties)
+        {
+            IEnumerable<Product> products = GetProducts();
+            IEnumerable<Product> searchResult;
+            searchResult = (from product in products
+                            where ((product.ProductName.ToLower().Contains(searchProperties.SearchValue.ToLower()) || searchProperties.SearchValue == null)
+                            && (product.ProductPrice >= searchProperties.Min && product.ProductPrice <= searchProperties.Max)
+                            && (product.ProductCategoryID == searchProperties.CategoryID))
+                            select product).ToList();
+
+            return searchResult;
+        }
     }
 }
 

@@ -4615,6 +4615,30 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "ADOCRUDApplication.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/ADOCRUDApplication.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ADOCRUDApplication.Models.dll": {}
+        }
+      },
+      "DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "ADOCRUDApplication.Models": "1.0.0",
+          "System.Data.SqlClient": "4.5.1"
+        },
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
       }
     }
   },
@@ -12208,33 +12232,45 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "ADOCRUDApplication.Models/1.0.0": {
+      "type": "project",
+      "path": "../ADOCRUDApplication.Models/ADOCRUDApplication.Models.csproj",
+      "msbuildProject": "../ADOCRUDApplication.Models/ADOCRUDApplication.Models.csproj"
+    },
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../BAL/DAL.csproj",
+      "msbuildProject": "../BAL/DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "ADOCRUDApplication.Models >= 1.0.0",
+      "DAL >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kamalpreet.singh\\.nuget\\packages\\": {},
+    "C:\\Users\\admin\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DotNet\\ADOCRUDApplication\\ADOCRUDApplication\\ADOCRUDApplication.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\ADOCRUDApplication\\ADOCRUDApplication.csproj",
       "projectName": "ADOCRUDApplication",
-      "projectPath": "C:\\DotNet\\ADOCRUDApplication\\ADOCRUDApplication\\ADOCRUDApplication.csproj",
-      "packagesPath": "C:\\Users\\kamalpreet.singh\\.nuget\\packages\\",
-      "outputPath": "C:\\DotNet\\ADOCRUDApplication\\ADOCRUDApplication\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\ADOCRUDApplication\\ADOCRUDApplication.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\ADOCRUDApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\kamalpreet.singh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12246,7 +12282,14 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj"
+            },
+            "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\BAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\BAL\\DAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

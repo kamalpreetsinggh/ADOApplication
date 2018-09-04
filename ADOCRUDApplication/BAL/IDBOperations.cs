@@ -32,7 +32,7 @@ namespace DAL
         /// </summary>
         /// <param name="productID">Product ID</param>
         /// <returns>Employee Object</returns>
-        Product GetProduct(int productID);       
+        Product GetProductByID(int productID);       
 
         /// <summary>
         /// This method is used to delete a product by its product ID

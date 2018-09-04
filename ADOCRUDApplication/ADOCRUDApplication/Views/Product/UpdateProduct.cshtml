@@ -1,0 +1,38 @@
+﻿@model ADOCRUDApplication.Models.Product
+@{
+    ViewData["Title"] = "UpdateProduct";
+}
+
+<h2>UpdateProduct</h2>
+
+<div id="updateForm" style="margin-top: 20px">
+    <form method="post" class="form-group" id="updateProduct">
+        <div>
+            Product ID:
+            <input type="number" name="ProductID" class="form-control" />
+        </div>
+        <div>
+            Product Name:
+            <input type="text" name="ProductName" class="form-control" />
+        </div>
+        <br />
+        <div>
+            Product Price:
+            <input type="number" name="ProductPrice" class="form-control" />
+        </div>
+        <br />
+        <div>
+            Product Category:
+            <select name="ProductCategoryID" class="form-control">
+                <option value="1">Clothing</option>
+                <option value="2">Electronics</option>
+                <option value="3">Grocery</option>
+                <option value="4">Home Appliances</option>
+            </select>
+        </div>
+        <br />
+        <input type="submit" value="Update" data-attr="update" />
+    </form>
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/update.js"></script>

@@ -1173,23 +1173,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kamalpreet.singh\\.nuget\\packages\\": {},
+    "C:\\Users\\admin\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DotNet\\ADOCRUDApplication\\BAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\BAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\DotNet\\ADOCRUDApplication\\BAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\kamalpreet.singh\\.nuget\\packages\\",
-      "outputPath": "C:\\DotNet\\ADOCRUDApplication\\BAL\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\BAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\BAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\kamalpreet.singh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1202,8 +1202,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\DotNet\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj": {
-              "projectPath": "C:\\DotNet\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj"
+            "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\Products\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj"
             }
           }
         }
