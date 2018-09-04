@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ADOCRUDApplication.Models;
+﻿using ADOCRUDApplication.Models;
 using DAL;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,7 +8,7 @@ namespace ADOCRUDApplication.Controllers
     {
         public IActionResult Index()
         {
-            DBOperations dBOperations = new DBOperations();
+            var dBOperations = new DBOperations();
             return View(dBOperations.GetProducts());
         }
 
@@ -24,7 +20,7 @@ namespace ADOCRUDApplication.Controllers
         [HttpPost]
         public IActionResult AddProduct(Product product)
         {
-            DBOperations dBOperations = new DBOperations();
+            var dBOperations = new DBOperations();
             var rowsAffected=dBOperations.AddProduct(product);
             if(rowsAffected > 0)
             {
@@ -38,7 +34,7 @@ namespace ADOCRUDApplication.Controllers
 
         public IActionResult UpdateProduct(int productID)
         {
-            DBOperations dBOperations = new DBOperations();
+            var dBOperations = new DBOperations();
             var product = dBOperations.GetProductByID(productID);
             return View(product);
         }
@@ -46,7 +42,7 @@ namespace ADOCRUDApplication.Controllers
         [HttpPost]
         public IActionResult UpdateProduct(Product product)
         {
-            DBOperations dBOperations = new DBOperations();
+            var dBOperations = new DBOperations();
             var rowsAffected = dBOperations.UpdateProduct(product);
 
             if (rowsAffected > 0)
@@ -61,7 +57,7 @@ namespace ADOCRUDApplication.Controllers
 
         public IActionResult DeleteProduct(int productID)
         {
-            DBOperations dBOperations = new DBOperations();
+            var dBOperations = new DBOperations();
             var rowsAffected = dBOperations.DeleteProduct(productID);
 
             if (rowsAffected > 0)
@@ -77,14 +73,14 @@ namespace ADOCRUDApplication.Controllers
         [HttpPost]
         public IActionResult Search(SearchProperties searchProperties)
         {
-            DBOperations dBOperations = new DBOperations();
+            var dBOperations = new DBOperations();
             var searchResult = dBOperations.Search(searchProperties);
             return View(searchResult);
         }
 
         public ActionResult DetailsProduct(int productID)
         {
-            DBOperations dBOperations = new DBOperations();
+            var dBOperations = new DBOperations();
             var product = dBOperations.GetProductByID(productID);
             return View(product);
         }

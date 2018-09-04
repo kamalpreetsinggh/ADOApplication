@@ -13,17 +13,17 @@ namespace DAL
         private SqlConnection sqlConnection;
         private SqlDataAdapter sqlDataAdapter;
 
-        private string connectionString = "Data Source=192.168.12.20;Initial Catalog=training2018;User ID=usr_2018;Password=pwd@123";
+        private const string ConnectionString = "Data Source=192.168.12.20;Initial Catalog=training2018;User ID=usr_2018;Password=pwd@123";
 
         public IEnumerable<Product> GetProducts()
         {
-            using (sqlConnection = new SqlConnection(connectionString))
+            using (sqlConnection = new SqlConnection(ConnectionString))
             {
                 sqlConnection.Open();
                 sqlCommand = new SqlCommand("SELECT * FROM tblProduct ", sqlConnection);
-                SqlDataReader dataReader = sqlCommand.ExecuteReader();
+                var dataReader = sqlCommand.ExecuteReader();
 
-                List<Product> products = new List<Product>();
+                var products = new List<Product>();
 
                 while (dataReader.Read())
                 {
@@ -43,7 +43,7 @@ namespace DAL
 
         public int AddProduct(Product product)
         {
-            using (sqlConnection = new SqlConnection(connectionString))
+            using (sqlConnection = new SqlConnection(ConnectionString))
             {
                 sqlConnection.Open();
 
@@ -62,7 +62,7 @@ namespace DAL
 
         public int UpdateProduct(Product product)
         {
-            using (sqlConnection = new SqlConnection(connectionString))
+            using (sqlConnection = new SqlConnection(ConnectionString))
             {
                 sqlConnection.Open();
 
@@ -76,23 +76,23 @@ namespace DAL
 
         public int DeleteProduct(int productID)
         {
-            using (sqlConnection = new SqlConnection(connectionString))
+            using (sqlConnection = new SqlConnection(ConnectionString))
             {
                 sqlConnection.Open();
                 sqlCommand = new SqlCommand("DELETE FROM tblProduct WHERE ProductID = " + productID, sqlConnection);
-                SqlDataReader dataReader = sqlCommand.ExecuteReader();
+                var dataReader = sqlCommand.ExecuteReader();
                 return dataReader.RecordsAffected;
             }
         }
 
         public Product GetProductByID(int productID)
         {
-            using (sqlConnection = new SqlConnection(connectionString))
+            using (sqlConnection = new SqlConnection(ConnectionString))
             {
                 sqlConnection.Open();
                 sqlCommand = new SqlCommand("SELECT * FROM tblProduct WHERE ProductID =" + productID, sqlConnection);
 
-                SqlDataReader dataReader = sqlCommand.ExecuteReader();
+                var dataReader = sqlCommand.ExecuteReader();
 
                 if (dataReader.HasRows)
                 {
@@ -115,13 +115,10 @@ namespace DAL
 
         public IEnumerable<Product> Search(SearchProperties searchProperties)
         {
-            IEnumerable<Product> products = GetProducts();
-            IEnumerable<Product> searchResult;
-            searchResult = (from product in products
-                            where ((product.ProductName.ToLower().Contains(searchProperties.SearchValue.ToLower()) || searchProperties.SearchValue == null)
-                            && (product.ProductPrice >= searchProperties.Min && product.ProductPrice <= searchProperties.Max)
-                            && (product.ProductCategoryID == searchProperties.CategoryID))
-                            select product).ToList();
+            var products = GetProducts();
+            IEnumerable<Product> searchResult = (from product in products
+                where (product.ProductName.ToLower().Contains(searchProperties.SearchValue.ToLower()) || searchProperties.SearchValue == null) && product.ProductPrice >= searchProperties.Min && product.ProductPrice <= searchProperties.Max && product.ProductCategoryID == searchProperties.CategoryID
+                select product).ToList();
 
             return searchResult;
         }

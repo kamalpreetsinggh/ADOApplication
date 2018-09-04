@@ -49,9 +49,12 @@
                     @Html.DisplayFor(modelItem => product.DateCreated)
                 </td>
                 <td>
-                    @Html.ActionLink("Update", "UpdateProduct", new { id = product.ProductID }) |
+                    @*@Html.ActionLink("Update", "UpdateProduct", new { id = product.ProductID }) |
                     @Html.ActionLink("Details", "DetailsProduct", new { id = product.ProductID })|
-                    @Html.ActionLink("Delete", "DeleteProduct", new { id = product.ProductID })
+                    @Html.ActionLink("Delete", "DeleteProduct", new { id = product.ProductID })*@
+                    <a asp-action="UpdateProduct" asp-route-id="@product.ProductID">Update</a> |
+                    <a asp-action="DetailsProduct" asp-route-id="@product.ProductID">Details</a> |
+                    <a asp-action="DeleteProduct" asp-route-id="@product.ProductID">Delete</a>
                 </td>
             </tr>
         }
@@ -72,9 +75,9 @@ else
         <option value="4">Home Appliances</option>
     </select>
     <span>Price Form :</span>
-    <input type="number" name="Min" class="form-control" />
+    <input type="number" name="Min" class="form-control" min="0" max="250000"/>
     <span> To </span>
-    <input type="number" name="Max" class="form-control" />
+    <input type="number" name="Max" class="form-control" min="0" max="250000" />
     <input type="submit" value="Search" class="btn btn-primary" />
 </form>
 

@@ -15,3 +15,12 @@ C:\Users\admin\Desktop\Products\ADOCRUDApplication\ADOCRUDApplication.Models\obj
 C:\Users\admin\Desktop\Products\ADOCRUDApplication\ADOCRUDApplication.Models\obj\Debug\netcoreapp2.1\ADOCRUDApplication.Models.AssemblyInfo.cs
 C:\Users\admin\Desktop\Products\ADOCRUDApplication\ADOCRUDApplication.Models\obj\Debug\netcoreapp2.1\ADOCRUDApplication.Models.dll
 C:\Users\admin\Desktop\Products\ADOCRUDApplication\ADOCRUDApplication.Models\obj\Debug\netcoreapp2.1\ADOCRUDApplication.Models.pdb
+D:\DotNet\ADOApplication\ADOCRUDApplication\ADOCRUDApplication.Models\bin\Debug\netcoreapp2.1\ADOCRUDApplication.Models.deps.json
+D:\DotNet\ADOApplication\ADOCRUDApplication\ADOCRUDApplication.Models\bin\Debug\netcoreapp2.1\ADOCRUDApplication.Models.dll
+D:\DotNet\ADOApplication\ADOCRUDApplication\ADOCRUDApplication.Models\bin\Debug\netcoreapp2.1\ADOCRUDApplication.Models.pdb
+D:\DotNet\ADOApplication\ADOCRUDApplication\ADOCRUDApplication.Models\obj\Debug\netcoreapp2.1\ADOCRUDApplication.Models.csprojAssemblyReference.cache
+D:\DotNet\ADOApplication\ADOCRUDApplication\ADOCRUDApplication.Models\obj\Debug\netcoreapp2.1\ADOCRUDApplication.Models.csproj.CoreCompileInputs.cache
+D:\DotNet\ADOApplication\ADOCRUDApplication\ADOCRUDApplication.Models\obj\Debug\netcoreapp2.1\ADOCRUDApplication.Models.AssemblyInfoInputs.cache
+D:\DotNet\ADOApplication\ADOCRUDApplication\ADOCRUDApplication.Models\obj\Debug\netcoreapp2.1\ADOCRUDApplication.Models.AssemblyInfo.cs
+D:\DotNet\ADOApplication\ADOCRUDApplication\ADOCRUDApplication.Models\obj\Debug\netcoreapp2.1\ADOCRUDApplication.Models.dll
+D:\DotNet\ADOApplication\ADOCRUDApplication\ADOCRUDApplication.Models\obj\Debug\netcoreapp2.1\ADOCRUDApplication.Models.pdb

@@ -22,3 +22,15 @@ C:\Users\admin\Desktop\Products\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\D
 C:\Users\admin\Desktop\Products\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\DAL.csproj.CopyComplete
 C:\Users\admin\Desktop\Products\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\DAL.dll
 C:\Users\admin\Desktop\Products\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\DAL.pdb
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\bin\Debug\netcoreapp2.1\DAL.deps.json
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\bin\Debug\netcoreapp2.1\DAL.dll
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\bin\Debug\netcoreapp2.1\DAL.pdb
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\bin\Debug\netcoreapp2.1\ADOCRUDApplication.Models.dll
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\bin\Debug\netcoreapp2.1\ADOCRUDApplication.Models.pdb
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\DAL.csprojAssemblyReference.cache
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\DAL.csproj.CoreCompileInputs.cache
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\DAL.AssemblyInfoInputs.cache
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\DAL.AssemblyInfo.cs
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\DAL.csproj.CopyComplete
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\DAL.dll
+D:\DotNet\ADOApplication\ADOCRUDApplication\BAL\obj\Debug\netcoreapp2.1\DAL.pdb
