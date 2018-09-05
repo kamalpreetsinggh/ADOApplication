@@ -225,12 +225,12 @@ else
 #line default
 #line hidden
             BeginContext(2066, 755, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "035e601dab8b4906850b60c7d84435a6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3895431f85584c39b28f75e71d668fea", async() => {
                 BeginContext(2130, 202, true);
                 WriteLiteral("\r\n\r\n    <input type=\"text\" name=\"SearchValue\" class=\"form-control\" placeholder=\"Product Name\" />\r\n    <span>Search Category :</span>\r\n    <select name=\"ProductCategoryID\" class=\"form-control\">\r\n        ");
                 EndContext();
                 BeginContext(2332, 35, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6a525ebee87649758a305781ba322c5d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "22f164db70b84c7b921429ace2e54909", async() => {
                     BeginContext(2350, 8, true);
                     WriteLiteral("Clothing");
                     EndContext();
@@ -252,7 +252,7 @@ else
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(2377, 38, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "93a87a0f271e4abb9ea934dc9e03e7d9", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0525f9f63e734c6cbf1254f6dfd2ca80", async() => {
                     BeginContext(2395, 11, true);
                     WriteLiteral("Electronics");
                     EndContext();
@@ -274,7 +274,7 @@ else
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(2425, 34, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d428e4ffd8745fb8c00d6046351bd89", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "01dd484446984caf850b4cd2c104e87a", async() => {
                     BeginContext(2443, 7, true);
                     WriteLiteral("Grocery");
                     EndContext();
@@ -296,7 +296,7 @@ else
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(2469, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5a0dbc6944aa4d5289453a046e1a273e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6c29a1219a974e7f8c859788fed07282", async() => {
                     BeginContext(2487, 15, true);
                     WriteLiteral("Home Appliances");
                     EndContext();

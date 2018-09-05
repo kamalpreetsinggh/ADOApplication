@@ -162,12 +162,12 @@ Write(Html.AntiForgeryToken());
             WriteLiteral("\r\n            <div class=\"col-md-10\">\r\n                ");
             EndContext();
             BeginContext(1399, 320, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccd81160f4a84bc2a50ec5177f749a5a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5853835262ac4dc0b6ef56419b87f5c1", async() => {
                 BeginContext(1456, 22, true);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(1478, 35, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d7b94cdcd04a41809fed74cbd78c6aba", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c63c4adb27e40d5bc6e1d53f0f67cd5", async() => {
                     BeginContext(1496, 8, true);
                     WriteLiteral("Clothing");
                     EndContext();
@@ -189,7 +189,7 @@ Write(Html.AntiForgeryToken());
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(1535, 38, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84421e1cc8094692a6e1c1098c817291", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3a54f01f3da940588d63e78c00e2a160", async() => {
                     BeginContext(1553, 11, true);
                     WriteLiteral("Electronics");
                     EndContext();
@@ -211,7 +211,7 @@ Write(Html.AntiForgeryToken());
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(1595, 34, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84e9539615ae4eb8ac546e3e46f1a256", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "67f43748863744c1b35ced9195df393a", async() => {
                     BeginContext(1613, 7, true);
                     WriteLiteral("Grocery");
                     EndContext();
@@ -233,7 +233,7 @@ Write(Html.AntiForgeryToken());
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(1651, 41, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f7e60d1995647c4b52456fc0a1a9a44", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "04e8bbf429ed41b0b3259adb681daa65", async() => {
                     BeginContext(1669, 14, true);
                     WriteLiteral("Home Appiances");
                     EndContext();
