@@ -1,7 +1,79 @@
-﻿
+﻿@model IEnumerable<ADOCRUDApplication.Models.Product>
+
 @{
     ViewData["Title"] = "Search";
 }
 
-<h2>Search</h2>
+<h2>Search results</h2>
 
+@if (Model != null)
+{
+    <table class="table">
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => product.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => product.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => product.ProductPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => product.DateCreated)
+                </td>
+                <td>
+                    @Html.ActionLink("Update", "UpdateProduct", new { productID = product.ProductID }) |
+                    @Html.ActionLink("Details", "DetailsProduct", new { productID = product.ProductID })|
+                    @Html.ActionLink("Delete", "DeleteProduct", new { productID = product.ProductID })
+                    @*<a asp-action="UpdateProduct" asp-route-id="@product.ProductID">Update</a> |
+                        <a asp-action="DetailsProduct" asp-route-id="@product.ProductID">Details</a> |
+                        <a asp-action="DeleteProduct" asp-route-id="@product.ProductID">Delete</a>*@
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <h3>No records where found</h3>
+}
+<form class="form-inline" method="post" action="Product/Search">
+
+    <input type="text" name="SearchValue" class="form-control" placeholder="Product Name" />
+    <span>Search Category :</span>
+    <select name="ProductCategoryID" class="form-control">
+        <option value="1">Clothing</option>
+        <option value="2">Electronics</option>
+        <option value="3">Grocery</option>
+        <option value="4">Home Appliances</option>
+    </select>
+    <span>Price Form :</span>
+    <input type="number" name="Min" class="form-control" min="0" max="250000" />
+    <span> To </span>
+    <input type="number" name="Max" class="form-control" min="0" max="250000" />
+    <input type="submit" value="Search" class="btn btn-primary" />
+</form>

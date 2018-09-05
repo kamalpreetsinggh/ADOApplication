@@ -26,10 +26,8 @@ namespace ADOCRUDApplication.Controllers
             {
                 return RedirectToAction("Index","Product");
             }
-            else
-            {
-                return Content("Internal Server Error");
-            }
+
+            return Content("Internal Server Error");
         }
 
         public IActionResult UpdateProduct(int productID)
@@ -49,25 +47,22 @@ namespace ADOCRUDApplication.Controllers
             {
                 return RedirectToAction("Index", "Product");
             }
-            else
-            {
-                return Content("Internal Server Error");
-            }
+
+            return Content("Internal Server Error");
         }
 
         public IActionResult DeleteProduct(int productID)
         {
             var dBOperations = new DBOperations();
+            
             var rowsAffected = dBOperations.DeleteProduct(productID);
 
             if (rowsAffected > 0)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Product");
             }
-            else
-            {
-                return Content("Internal Server Error");
-            }
+
+            return Content("Internal Server Error");
         }
 
         [HttpPost]
@@ -82,7 +77,12 @@ namespace ADOCRUDApplication.Controllers
         {
             var dBOperations = new DBOperations();
             var product = dBOperations.GetProductByID(productID);
-            return View(product);
+            if (product != null)
+            {
+                return View(product);
+            }
+
+            return Content("Internal Server Error");
         }
     }
 }

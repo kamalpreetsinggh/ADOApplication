@@ -8,10 +8,6 @@
 <div id="updateForm" style="margin-top: 20px">
     <form method="post" class="form-group" id="updateProduct">
         <div>
-            Product ID:
-            <input type="number" name="ProductID" class="form-control" />
-        </div>
-        <div>
             Product Name:
             <input type="text" name="ProductName" class="form-control" />
         </div>
@@ -33,6 +29,6 @@
         <br />
         <input type="submit" value="Update" data-attr="update" />
     </form>
+        <a asp-action="Index">Back to List</a>
 </div>
-<script src="~/lib/jquery/dist/jquery.js"></script>
-<script src="~/js/update.js"></script>
+
