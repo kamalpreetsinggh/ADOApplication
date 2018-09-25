@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DotNet\\ADOApplication\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj",
+      "projectUniqueName": "D:\\Projects\\DotNet\\ADOApplication\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj",
       "projectName": "ADOCRUDApplication.Models",
-      "projectPath": "D:\\DotNet\\ADOApplication\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj",
+      "projectPath": "D:\\Projects\\DotNet\\ADOApplication\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\DotNet\\ADOApplication\\ADOCRUDApplication\\ADOCRUDApplication.Models\\obj\\",
+      "outputPath": "D:\\Projects\\DotNet\\ADOApplication\\ADOCRUDApplication\\ADOCRUDApplication.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

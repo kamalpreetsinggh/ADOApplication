@@ -1179,11 +1179,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DotNet\\ADOApplication\\ADOCRUDApplication\\BAL\\DAL.csproj",
+      "projectUniqueName": "D:\\Projects\\DotNet\\ADOApplication\\ADOCRUDApplication\\BAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\DotNet\\ADOApplication\\ADOCRUDApplication\\BAL\\DAL.csproj",
+      "projectPath": "D:\\Projects\\DotNet\\ADOApplication\\ADOCRUDApplication\\BAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\DotNet\\ADOApplication\\ADOCRUDApplication\\BAL\\obj\\",
+      "outputPath": "D:\\Projects\\DotNet\\ADOApplication\\ADOCRUDApplication\\BAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1202,8 +1202,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\DotNet\\ADOApplication\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj": {
-              "projectPath": "D:\\DotNet\\ADOApplication\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj"
+            "D:\\Projects\\DotNet\\ADOApplication\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj": {
+              "projectPath": "D:\\Projects\\DotNet\\ADOApplication\\ADOCRUDApplication\\ADOCRUDApplication.Models\\ADOCRUDApplication.Models.csproj"
             }
           }
         }
